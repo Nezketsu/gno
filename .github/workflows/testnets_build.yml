@@ -17,7 +17,7 @@ jobs:
   bake:
     strategy:
       matrix:
-        image: [gnofaucet]
+        image: [gnofaucet] ## gnocore
     runs-on: ubuntu-latest
     steps:
       - name: Login to GitHub Container Registry
@@ -57,6 +57,7 @@ jobs:
           push: true
           targets: ${{ matrix.image }}
           set: |
+            common.platform=linux/amd64
             *.cache-from=type=gha
             *.cache-to=type=gha,mode=max
             *.context=.

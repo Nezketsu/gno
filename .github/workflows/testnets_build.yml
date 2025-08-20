@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - chain/test*
-      - feature/faucet-github-bake
+      - feature/faucet-github-rewards
   workflow_dispatch:
 
 permissions:
